@@ -35,11 +35,11 @@ function App() {
         <div className="flex-1 overflow-y-auto p-4 md:p-6 space-y-6 scrollbar-hide">
           <PageHeader />
 
-          {/* Top Section - Desktop Layout */}
-          {/* Top Section - Responsive Layout */}
+          
+          
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-            {/* Column 1: Institute Card & Red Ribbon (Desktop) */}
+          
 
             <InstituteCard />
             <DonutChartCard />
@@ -51,25 +51,23 @@ function App() {
 
 
 
-            {/* Column 3: Bar Chart & Purple Ribbon (Desktop) */}
+            
             <div className="flex flex-col gap-6">
               <div className="h-full">
 
               </div>
-              {/* <div className="flex-1 hidden md:block">
-                <RibbonCard title="Total Downtime" value="35 mins 21 sec" colorClass="bg-[#6658dd]" />
-              </div> */}
+              
             </div>
           </div>
 
-          {/* Mobile Only: Stacked Ribbons Section */}
+    
           <div className="md:hidden flex flex-col space-y-4">
             <RibbonCard title="Total Asset" value="200" colorClass="bg-[#F44771]" />
             <RibbonCard title="Not working Asset" value="100" colorClass="bg-[#FF9F43]" />
             <RibbonCard title="Total Downtime" value="35 mins 21 sec" colorClass="bg-[#6658dd]" />
           </div>
 
-          {/* 4. Stat Cards (Check outs, Incidents, Work Order) */}
+        
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <StatCard title="Check outs" items={[
               { label: 'Checked In', value: '0' },
@@ -107,7 +105,7 @@ function App() {
           {/* 6. Departments List */}
           <div className="space-y-6">
             <div className="bg-white rounded-xl p-3 shadow-md">
-              {/* Design image 2 shows distinct cards, so we just stack them */}
+              
               <DepartmentCard name="Anesthesiology" color="bg-[#56ABF8]" />
               <DepartmentCard name="Radiology" color="bg-[#56ABF8]" />
             </div>
