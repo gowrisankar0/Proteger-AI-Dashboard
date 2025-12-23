@@ -12,10 +12,10 @@ import {
     ChevronDown
 } from 'lucide-react';
 
-// Importing assets directly to ensure Vite bundles them
-import dashboardIcon from '../assets/dashbpoard.png'; // Note: Typo in filename on disk
-import assetIcon from '../assets/assest.png'; // Note: Typo in filename on disk
-import incidentIcon from '../assets/insident.png'; // Note: Typo in filename on disk
+
+import dashboardIcon from '../assets/dashbpoard.png'; 
+import assetIcon from '../assets/assest.png'; 
+import incidentIcon from '../assets/insident.png'; 
 import settingsIcon from '../assets/settings.png';
 import messageIcon from '../assets/message.png';
 import usersIcon from '../assets/users.png';
@@ -35,7 +35,7 @@ export function Sidebar({ isOpen, onClose }) {
 
     return (
         <>
-            {/* Mobile Backdrop */}
+            
             {isOpen && (
                 <div
                     className="fixed inset-0 bg-black/50 z-40 md:hidden"
@@ -55,7 +55,7 @@ export function Sidebar({ isOpen, onClose }) {
                         <img src={logo} alt="Logo" className='m-auto h-12 w-20' />
                         {/* Close button for mobile */}
                         <button onClick={onClose} className="md:hidden text-slate-400 hover:text-white">
-                            <LogOut size={20} className="rotate-180" /> {/* Using LogOut icon reversed as a close/back indicator or X if preferred needed */}
+                            <LogOut size={20} className="rotate-180" /> 
                         </button>
                     </div>
                 </div>
@@ -78,7 +78,7 @@ export function Sidebar({ isOpen, onClose }) {
                     ))}
                 </nav>
 
-                {/* Pill shaped buttons with specific gap, centered, same width */}
+            
                 <div className="px-6 mt-12 space-y-4">
                     <button className="flex items-center gap-3 px-4 py-2.5 text-slate-200 hover:text-white w-full justify-center rounded-full border border-slate-600 hover:bg-white/5 transition-colors">
                         <Headphones size={18} />
