@@ -13,7 +13,7 @@ export function DonutChartCard() {
             <div className="font-bold text-slate-800 text-sm md:text-base text-center mb-2">Monthly Report</div>
 
             <div className="flex items-center justify-center gap-4 flex-1">
-                {/* Chart Circle */}
+            
                 <div className="h-28 w-28 relative">
                     <ResponsiveContainer width="100%" height="100%">
                         <PieChart>
@@ -35,7 +35,7 @@ export function DonutChartCard() {
                     </ResponsiveContainer>
                 </div>
 
-                {/* Legend */}
+            
                 <div className="space-y-2">
                     {PIE_DATA.map((item) => (
                         <div key={item.name} className="flex items-center gap-2">
@@ -46,7 +46,7 @@ export function DonutChartCard() {
                 </div>
             </div>
 
-            {/* Floating Pill */}
+            
             <div className="flex justify-center mt-2">
                 <span className="bg-slate-900 text-white text-[10px] font-medium px-3 py-1 rounded-md shadow-sm">
                     Total Working Assets - 7
