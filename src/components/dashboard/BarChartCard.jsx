@@ -1,14 +1,14 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-// Matching colors from design
-const COLOR_OPEN = "#1e40af"; // Dark Blue
-const COLOR_CLOSED = "#60a5fa"; // Light Blue
+
+const COLOR_OPEN = "#1e40af"; 
+const COLOR_CLOSED = "#60a5fa"; 
 
 const INCIDENT_BAR_DATA = [
-    { name: 'Incidents', open: 14, closed: 7 }, // Stacked roughly 21 total
-    { name: 'Work Order', open: 6, closed: 15 }, // Stacked 21 roughly
-    { name: 'Check outs', open: 0, closed: 25 }, // Mostly closed
+    { name: 'Incidents', open: 14, closed: 7 }, 
+    { name: 'Work Order', open: 6, closed: 15 }, 
+    { name: 'Check outs', open: 0, closed: 25 }, 
 ];
 
 export function IncidentBarChartCard() {
@@ -47,14 +47,14 @@ export function IncidentBarChartCard() {
                             align="right"
                             wrapperStyle={{ fontSize: '10px', paddingBottom: '20px' }}
                         />
-                        {/* Stacked Bars with specific radius logic if possible, or just top radius for top bar */}
+                    
                         <Bar dataKey="open" fill={COLOR_OPEN} name="Open" stackId="shouldStack" />
                         <Bar
                             dataKey="closed"
                             fill={COLOR_CLOSED}
                             name="Closed"
                             stackId="shouldStack"
-                            radius={[4, 4, 0, 0]} // Round top of the stack
+                            radius={[4, 4, 0, 0]}
                         />
                     </BarChart>
                 </ResponsiveContainer>
