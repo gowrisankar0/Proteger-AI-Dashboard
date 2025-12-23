@@ -8,22 +8,19 @@ export function DepartmentBarChart({ title, data, colors }) {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 768);
         };
-        handleResize(); // Check on mount
+        handleResize(); 
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    // Desktop: Horizontal Bars (layout="vertical")
-    // Mobile: Vertical Bars (layout="horizontal" - default)
-
-    // Axis Configuration based on layout
+    
     const xAxisProps = isMobile
-        ? { dataKey: "name", axisLine: false, tickLine: false, tick: { fontSize: 10, fill: '#64748b' }, interval: 0, height: 40 } // Mobile: X-axis has names
-        : { type: "number", hide: true }; // Desktop: X-axis is value (hidden)
+        ? { dataKey: "name", axisLine: false, tickLine: false, tick: { fontSize: 10, fill: '#64748b' }, interval: 0, height: 40 } 
+        : { type: "number", hide: true };
 
     const yAxisProps = isMobile
-        ? { hide: true } // Mobile: Y-axis is value (hidden or simple)
-        : { dataKey: "name", type: "category", width: 180, tick: { fontSize: 11, fill: '#475569', fontWeight: 500 }, axisLine: false, tickLine: false }; // Desktop: Y-axis has names
+        ? { hide: true } 
+        : { dataKey: "name", type: "category", width: 180, tick: { fontSize: 11, fill: '#475569', fontWeight: 500 }, axisLine: false, tickLine: false };
 
     return (
         <div className="bg-white p-4 rounded-xl shadow-md border border-gray-100">
@@ -71,7 +68,7 @@ export function DepartmentBarChart({ title, data, colors }) {
                             fill={colors.closed}
                             name="Closed"
                             stackId="a"
-                            radius={isMobile ? [4, 4, 0, 0] : [0, 4, 4, 0]} // Top radius for vertical, Right radius for horizontal
+                            radius={isMobile ? [4, 4, 0, 0] : [0, 4, 4, 0]} 
                         />
                     </BarChart>
                 </ResponsiveContainer>
